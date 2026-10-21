@@ -1,0 +1,16 @@
+[project]
+name = "huizhi-paper-library"
+version = "0.1.0"
+description = "把本地公考试卷目录导入 SQLite，离线浏览与检索"
+requires-python = ">=3.11"
+dependencies = ["lxml>=5,<7", "Pillow>=10,<13"]
+
+[project.scripts]
+paper-library = "paper_library.cli:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
